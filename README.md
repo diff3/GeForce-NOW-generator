@@ -20,21 +20,6 @@ $ pip install -r requirements.txt
 ```
 
 Create a valid **config.ini** file inside the repo dir (sample in Prerequisites) and run the script from the shell.
-It takes two positional arguments - username and filename.
-
-```
-$ ./GeForce_NOW_games.py --help
-usage: GeForce-NOW-games [-h] username filename
-
-Generate a list of owned Steam games that work on GeForce NOW platform.
-
-positional arguments:
-  username    Steam username (urluser - present in the profile url)
-  filename    name of the output file - will be created or overwritten
-
-optional arguments:
-  -h, --help  show this help message and exit
-```
 
 ### Prerequisites
 
@@ -50,15 +35,18 @@ as well as:
 steamapi
 ```
 
-The script requires a **config.ini** file of the following format:
+Please update the **config.ini** file and add this information:
 
 ```
 [STEAM]
 ApiKey = <insert_your_key_here>
+User = <inser_name>
 ```
 
 The end user will also need to obtain a valid Steam API **key** to connect. It is simple and easy to do (domain name is a formality - just put '127.0.0.1' since there's no place like home).
 Please refer to [official Steam API documentation](https://steamcommunity.com/dev) for more information.
+
+
 
 ## Authors
 
