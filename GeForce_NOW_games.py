@@ -41,7 +41,7 @@ def generate_list(json_data):
 
     global whitelist
 
-    data = [''.join(filter(whitelist.__contains__,game['title'])) for game in json_data]
+    data = [''.join(filter(whitelist.__contains__,game['title'])).strip() for game in json_data]
     return data
 
 
@@ -58,7 +58,7 @@ def connect(api_key, userurl):
     steamapi.core.APIConnection(api_key=api_key, validate_key=True)
     user = steamapi.user.SteamUser(userurl=userurl)
     games = user.games
-    games_list = [''.join(filter(whitelist.__contains__,game.name)) for game in games]
+    games_list = [''.join(filter(whitelist.__contains__,game.name)).strip() for game in games]
     return games_list
 
 
